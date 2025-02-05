@@ -29,7 +29,7 @@ public class arrStuff {
             }
             else if (choice == 4) 
             {
-                
+                findOddAndEven();
             }
         }while(choice != 5);
     }
@@ -88,9 +88,22 @@ public class arrStuff {
         return differenceArr;
     }
 
-    public static int FindOddAndEven()
+    public static void findOddAndEven()
     {
-
+        int sumOfOdd = 0;
+        int sumOfEven = 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            if (i % 2 == 1) 
+            {
+                sumOfOdd += arr[i];
+            }
+            if (i % 2 == 0) 
+            {
+                sumOfEven += arr[i];
+            }
+        }
+        System.out.println("Sum of odd indexed: " + sumOfOdd + " Sum of even indexes: " + sumOfEven);
     }
 
     public static void printArray(int[] intArr)
